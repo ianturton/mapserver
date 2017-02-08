@@ -16,8 +16,8 @@ include(CheckCSourceCompiles)
 
 
 set (MapServer_VERSION_MAJOR 7)
-set (MapServer_VERSION_MINOR 0)
-set (MapServer_VERSION_REVISION 4)
+set (MapServer_VERSION_MINOR 1)
+set (MapServer_VERSION_REVISION 0)
 set (MapServer_VERSION_SUFFIX "")
 
 set(TARGET_VERSION_MAJOR ${MapServer_VERSION_MAJOR})
@@ -92,7 +92,6 @@ endif(NOT(WIN32))
 check_function_exists("strrstr"          HAVE_STRRSTR)
 check_function_exists("strcasecmp"  HAVE_STRCASECMP)
 check_function_exists("strcasestr"  HAVE_STRCASESTR)
-check_function_exists("strdup"  HAVE_STRDUP)
 check_function_exists("strlcat"  HAVE_STRLCAT)
 check_function_exists("strlcpy"  HAVE_STRLCPY)
 check_function_exists("strlen"  HAVE_STRLEN)
@@ -262,7 +261,8 @@ mapogcfiltercommon.c maprendering.c mapwcs20.c mapogcsld.c
 mapresample.c mapwfs.c mapgdal.c mapogcsos.c mapscale.c mapwfs11.c mapwfs20.c
 mapgeomtransform.c mapogroutput.c mapwfslayer.c mapagg.cpp mapkml.cpp
 mapgeomutil.cpp mapkmlrenderer.cpp fontcache.c textlayout.c maputfgrid.cpp
-mapogr.cpp mapcontour.c mapsmoothing.c mapv8.cpp ${REGEX_SOURCES} kerneldensity.c)
+mapogr.cpp mapcontour.c mapsmoothing.c mapv8.cpp ${REGEX_SOURCES} kerneldensity.c
+mapcompositingfilter.c)
 
 set(mapserver_HEADERS
 cgiutil.h dejavu-sans-condensed.h dxfcolor.h fontcache.h hittest.h mapagg.h
